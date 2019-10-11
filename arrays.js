@@ -73,7 +73,7 @@
 Nesse exercício, você fará a validação de números de cartão de crédito utilizando o algoritmo de Luhn:
 1) Retire o último dígito do número. Ele é o verificador;
 2) Escreva os números na ordem inversa;
-3) Multiplique os dígitos das casas ímpares por 2 e subtraia 9 de todos os resultados maiores que 9;
+3) Multiplique os dígitos das casas pares por 2 e subtraia 9 de todos os resultados maiores que 9;
 4) Some todos os números;
 5) O dígito verificador (aquele do passo 1) é o número que você precisa somar a todos os outros números somados pra obter um módulo 10.
 6) O cartão será válido se os números somados % 10 === 0.
@@ -81,17 +81,22 @@ Nesse exercício, você fará a validação de números de cartão de crédito u
 
 ////////////////////////////
 
-// let cartao = '4532841148586221'
-// let resultado = cartao.split('')
-// let ultimoDigito = resultado.pop()
-//     resultado.reverse()
-//     resultado.forEach(function digitosImpares(digitos){
-//         let i = 0;
-//         if (i % 2 === 1){
-//             resultado[i] *= 2
-//             return resultado
+// const cartao = '4532841148586221'
+// const cartaoConvertido = cartao.split('')
+// const cartaoParseado = cartaoConvertido.map(function(i){
+//     return parseInt(i)
+// })
+// const ultimoDigito = cartaoParseado.pop()
+// const reverter = cartaoParseado.reverse()
+//      cartaoParseado.map(function(i, indice){
+//          if (indice % 2 === 0){
+//              i *= 2
+//              if (i > 9){
+//                  return i-= 9
+//              }
+//              return  i
 //         }
-//         console.log(resultado)
+//         return i
 //     })
 
-
+// console.log()
